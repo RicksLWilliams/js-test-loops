@@ -4,6 +4,17 @@
 // output: ['is', 'a', 'split', 'sentence.', 'This']
 
 function rearranger(arr) {
+
+    let firstElm = arr[0]
+    let newArr= []
+   
+    for (let index = 1; index < arr.length; index++) {
+         newArr.push(arr[index])
+    }
+    newArr.push(firstElm)
+
+    return newArr
+
 }
 
 
@@ -16,6 +27,12 @@ function rearranger(arr) {
 // output: 42
 
 function largestNum(arr) {
+    let elm = 0 
+    for (let index = 0; index < arr.length; index++) {
+        if ( arr[index] > elm) {elm = arr[index]}
+        
+    }
+    return elm
 }
 
 
@@ -28,6 +45,13 @@ function largestNum(arr) {
 // output: [16, 8, 4, 28]
 
 function elemsTimesLength(arr) {
+    newArr = []
+        for (let index = 0; index < arr.length; index++) {
+            newArr.push(arr.length * arr[index])
+        
+    }
+    return newArr
+
 }
 
 
@@ -41,6 +65,7 @@ function elemsTimesLength(arr) {
 // Primitive data types - https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 
 function arrayFlattener(arr) {
+
 
 }
 
@@ -98,6 +123,11 @@ let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'P
 
 function findById(id) {
 
+    let person = staff[id]
+    if (person) {
+        return person  
+    } else return { error: 'No user with that id.'}
+
 }
 
 
@@ -124,4 +154,13 @@ let theBand = {
 }
 
 function bandMemberDetails(name) {
+
+    for (let index = 0; index < theBand.members.length; index++) {
+        member = theBand.members[index]
+        if(member.name == name){
+            return name + ' is in the band and plays the    ' + member.instrument
+        }
+        
+    }
+
 }
