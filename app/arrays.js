@@ -65,6 +65,8 @@ function elemsTimesLength(arr) {
 // Primitive data types - https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 
 function arrayFlattener(arr) {
+    return arr.toString()
+
 
 
 }
@@ -101,6 +103,22 @@ let flights = [{
 
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
+    route = {}
+
+    for (let index = 0; index < flights.length; index++) {
+        route = flights[index]
+        if(route.to == destination.toUpperCase()){
+            if (firstClass) {
+                return route.prices.firstClass
+            } else {
+                return route.prices.standard
+            }
+
+        }
+        
+    }
+
+
 
 }
 
@@ -123,10 +141,18 @@ let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'P
 
 function findById(id) {
 
-    let person = staff[id]
-    if (person) {
-        return person  
-    } else return { error: 'No user with that id.'}
+    let person = {}
+
+    for (let index = 0; index < staff.length; index++) {
+        person = staff[index]
+        if (person.id == id) { 
+            return person
+            
+        }
+        
+    }
+
+    return { error: "No user with that id." } 
 
 }
 
@@ -158,7 +184,7 @@ function bandMemberDetails(name) {
     for (let index = 0; index < theBand.members.length; index++) {
         member = theBand.members[index]
         if(member.name == name){
-            return name + ' is in the band and plays the    ' + member.instrument
+            return name + ' is in the band and plays the ' + member.instrument
         }
         
     }
