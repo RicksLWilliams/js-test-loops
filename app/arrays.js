@@ -28,12 +28,29 @@ function rearranger(arr) {
 
 function largestNum(arr) {
     let elm = 0 
+    let elmCount = 0
     for (let index = 0; index < arr.length; index++) {
         if ( arr[index] > elm) {elm = arr[index]}
         
     }
+
+    for (let index = 0; index < arr.length; index++) {
+        if (arr[index] == elm) {
+            elmCount++
+        }
+        
+    }
+
     return elm
+
+   //let retVal = {}
+   //retVal.key = elm
+   //retVal.value = elmCount
+   //retVal = elm[elmCount]
+
+    //return retVal
 }
+
 
 
 // ------------------------------------------

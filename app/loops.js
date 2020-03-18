@@ -4,12 +4,14 @@
 // output: 20
 
 function rangeTotal(n1, n2) {
-  let rangeTotal = 0
+// let rangeTotal = 0
+//
+//  for (let index = n1; index <= n2; index++) {
+//    rangeTotal += index;
+//  }
+//  return rangeTotal
 
-  for (let index = n1; index <= n2; index++) {
-    rangeTotal += index;
-  }
-  return rangeTotal
+return ( n2 * n2 + n2 - n1 * n1 + n1) / 2
 
 }
 

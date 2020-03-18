@@ -9,7 +9,7 @@
 // Hint: Utilize the string prototype method charCodeAt and generic method fromCharCode
 
 function nextLetter(letter){
-  switch (nextLetter) {
+  switch (letter) {
     case 'a':
       return 'b'
       break;
@@ -98,6 +98,8 @@ function letterChecker(str) {
     }
     
   }
+
+  return 'no missing letters'
 
   //charAt
 
